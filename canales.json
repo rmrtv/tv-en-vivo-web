@@ -1,0 +1,9 @@
+{
+  "canales": [
+    {
+      "nombre": "5tv",
+      "logo": "https://ejemplo.com/logo-canal.webp",
+      "url": "https://617c5175c970b.streamlock.net:4444/tvcinco/live1/playlist.m3u8"
+    }
+  ]
+}

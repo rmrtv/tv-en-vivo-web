@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b12">
+  <title>TV en vivo</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">▶</span><span>TV <b>EN VIVO</b></span></div>
+    <div class="top-hint">Usá las flechas del control remoto para navegar</div>
+  </header>
+
+  <main>
+    <section class="player-section" aria-label="Reproductor">
+      <div class="video-wrap">
+        <video id="player" controls playsinline preload="metadata"></video>
+        <div id="player-message" class="player-message">
+          <div class="play-symbol">▶</div>
+          <h2>Elegí un canal</h2>
+          <p>Seleccioná un canal de la lista para comenzar a mirar.</p>
+        </div>
+      </div>
+      <div class="now-playing">
+        <div id="current-logo-wrap" class="current-logo-wrap"><span>TV</span></div>
+        <div class="current-details">
+          <div class="eyebrow">ESTÁS VIENDO</div>
+          <h1 id="current-name">Ningún canal seleccionado</h1>
+          <p id="player-status">Seleccioná un canal para reproducir su transmisión.</p>
+        </div>
+        <button id="fullscreen-button" class="secondary-button" type="button">⛶ Pantalla completa</button>
+      </div>
+    </section>
+
+    <section class="channels-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">TU PROGRAMACIÓN</p><h2>Canales disponibles</h2></div>
+        <span id="channel-count" class="channel-count">0 canales</span>
+      </div>
+      <div id="channels-grid" class="channels-grid" aria-label="Lista de canales"></div>
+      <p id="empty-message" class="empty-message" hidden>No hay canales cargados. Agregá tus canales en el archivo <code>canales.json</code>.</p>
+    </section>
+  </main>
+
+  <footer>TV en vivo · Usá ← ↑ → ↓ para moverte, OK/Enter para elegir y Esc/Backspace para volver.</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+  <script src="app.js"></script>
+</body>
+</html>
